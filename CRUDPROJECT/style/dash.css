@@ -1,0 +1,349 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+body {
+    background: linear-gradient(120deg, #4e54c8, #8f94fb);
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 9%;
+    background: #fff;
+    color: #000;
+    width: 100%;
+}
+
+.logo {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 34px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    font-weight: bold;
+    color: #4e54c8;
+}
+
+.header .navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.header .navbar ul li a {
+    padding: 2rem;
+    display: block;
+    font-size: 1.7rem;
+    color: #000;
+}
+
+.header .navbar ul li a:hover {
+    background: linear-gradient(120deg, #4e54c8, #8f94fb);
+    color: #fff;
+}
+
+#menu-btn {
+    display: none;
+    cursor: pointer;
+    font-size: 2.5rem;
+    color: #000;
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 55%;
+    }
+    .header {
+        padding: 2rem;
+    }
+    #menu-btn {
+        display: inline-block;
+    }
+    .header .navbar {
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    .header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    .header .navbar ul {
+        flex-direction: column;
+    }
+    .header .navbar ul li {
+        width: 100%;
+    }
+}
+
+.task-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    padding: 4rem;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    margin: 5rem auto;
+}
+
+h2 {
+    font-size: 2.4rem;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+label {
+    font-size: 1.6rem;
+    color: #fff;
+    display: block;
+    margin: 1rem 0 0.5rem;
+}
+
+input[type="text"], input[type="date"] {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+}
+
+button[type="submit"] {
+    background: #4e54c8;
+    border: none;
+    padding: 1rem 2rem;
+    color: #fff;
+    font-size: 1.6rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background: #8f94fb;
+}
+
+.bg-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.bg-animation span {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    animation: move 8s linear infinite;
+}
+
+.bg-animation span:nth-child(1) {
+    top: 20%;
+    left: 15%;
+    animation-delay: 0s;
+}
+
+.bg-animation span:nth-child(2) {
+    top: 60%;
+    left: 70%;
+    animation-delay: 1.5s;
+}
+
+.bg-animation span:nth-child(3) {
+    top: 80%;
+    left: 35%;
+    animation-delay: 3s;
+}
+
+.bg-animation span:nth-child(4) {
+    top: 30%;
+    left: 85%;
+    animation-delay: 4.5s;
+}
+
+@keyframes move {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+    50% {
+        transform: translateY(-100px) translateX(100px);
+    100% {
+        transform: translateY(0) translateX(0);
+    }
+}
+
+.swal2-title {
+    font-size: 2rem !important;
+    font-weight: 600;
+    color: #333;
+}
+
+.swal2-content {
+    font-size: 1.6rem !important;
+    color: #555;
+}
+
+.swal2-popup {
+    border-radius: 15px;
+    padding: 2rem;
+}
+
+.swal2-confirm {
+    font-size: 1.7rem !important;
+    background-color: #3085d6 !important;
+    color: #fff !important;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    border: none;
+}
+
+.swal2-confirm:hover {
+    background-color: #276fa1 !important;
+}
+
+.swal2-cancel {
+    font-size: 1.7rem !important;
+    background-color: #d33 !important;
+    color: #fff !important;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    border: none;
+}
+
+.swal2-cancel:hover {
+    background-color: #c02a2a !important;
+}
+
+.task-list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 800px;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    font-size: 2.4rem;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.task-items {
+    list-style: none;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.task-info h3 {
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.task-info p {
+    font-size: 1.4rem;
+    color: #ccc;
+}
+
+.task-actions a {
+    font-size: 1.4rem;
+    color: #fff;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+.task-actions a:hover {
+    opacity: 0.8;
+}
+
+.btn-complete {
+    background-color: #4e54c8;
+}
+
+.btn-complete:hover {
+    background-color: #8f94fb;
+}
+
+.btn-delete {
+    background-color: #d33;
+}
+
+.btn-delete:hover {
+    background-color: #c02a2a;
+}
+
+.task-list {
+    overflow-y: auto;
+    max-height: 70vh;
+    width: 100%;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.task-items {
+    max-height: 60vh;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.task-item {
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.task-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
