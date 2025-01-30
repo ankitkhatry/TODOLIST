@@ -39,18 +39,14 @@ Group-A/
 │-- index.php
 │-- login.php
 │-- dashboard.php
-│-- all_tasks.php
-│-- new_task.php
-│-- pending_tasks.php
-│-- completed_tasks.php
-│-- update_task.php
+│-- alltasks.php
+│-- newtask.php
+│-- pendingtasks.php
+│-- completedtasks.php
+│-- updatetask.php
 │-- logout.php
 │-- README.md
-│-- database/
-│   │-- db_config.php
-│-- assets/
-│-- styles/
-│-- scripts/
+│-- sql.txt
 ```
 
 ## 🤝 Contributing
