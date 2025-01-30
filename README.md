@@ -1,6 +1,6 @@
-# Group-A
+# TODOLIST
 
-Welcome to the **Group-A** repository! This project is a **To-Do List Management System** built using **PHP**. It follows the **CRUD (Create, Read, Update, Delete)** operations to manage tasks efficiently.
+Welcome to the **TODOLIST** repository! This project is a **To-Do List Management System** built using **PHP**. It follows the **CRUD (Create, Read, Update, Delete)** operations to manage tasks efficiently.
 
 ## 📌 Features
 - User Authentication (Login/Logout)
