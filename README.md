@@ -14,11 +14,11 @@ Welcome to the **TODOLIST** repository! This project is a **To-Do List Managemen
 ## 🚀 Installation
 1. Clone the repository:
    ```sh
-   git clone https://github.com/ankitkhatry/Group-A.git
+   git clone https://github.com/ankitkhatry/TODOLIST.git
    ```
 2. Navigate to the project directory:
    ```sh
-   cd Group-A
+   cd TODOLIST
    ```
 3. Set up the database:
    - Import the provided SQL file into your MySQL database.
