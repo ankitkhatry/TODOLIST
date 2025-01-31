@@ -101,23 +101,23 @@ html {
 
 .task-list {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
     backdrop-filter: blur(12px);
     background: rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     padding: 2rem 4rem;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    width: 80%;
+    width: 100%;
     max-width: 900px;
-    text-align: center;
+    text-align: left;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 1;
 }
-
 
 h2 {
     font-size: 2.4rem;
@@ -142,6 +142,9 @@ h2 {
     margin-bottom: 1rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transition: all .3s ease;
+    word-wrap: break-word;
+    overflow: hidden;
+    max-width: 100%;
 }
 
 .task-item:hover {
@@ -150,10 +153,21 @@ h2 {
 
 .task-info {
     color: #fff;
+    word-wrap: break-word;
+    overflow: hidden;
+    max-width: 70%;
 }
 
 .task-info h3 {
     font-size: 1.8rem;
+    white-space: normal;
+}
+
+.task-actions {
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    width: 38%;
 }
 
 .task-actions a {
@@ -165,6 +179,9 @@ h2 {
     text-transform: uppercase;
     cursor: pointer;
     transition: all .2s ease;
+    white-space: nowrap;
+    flex-grow: 1;
+    text-align: center;
 }
 
 .btn-complete {
@@ -197,7 +214,6 @@ h2 {
         font-size: 1.2rem;
     }
 }
-
 
 .task-form {
     display: flex;
@@ -253,7 +269,6 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background: #8f94fb;
 }
-
 
 .bg-animation {
     position: absolute;
