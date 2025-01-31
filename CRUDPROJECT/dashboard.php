@@ -68,7 +68,7 @@ $conn->close();
                     </div>
                     <div class="task-actions">
                         <a href="completedtasks.php?complete=<?php echo $row['id']; ?>" class="btn-complete">Complete</a>
-                        <a href="updatetask.php?id=<?php echo $row['id']; ?>" class="btn-complete">Update</a>
+                        <a href="updatetask.php?id=<?php echo $row['id']; ?>" class="btn-update">Update</a>
                         <a href="dashboard.php?delete=<?php echo $row['id']; ?>" class="btn-delete" onclick="return confirm('Are you sure you want to delete this task?');">Delete</a>
                     </div>
                 </li>
