@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - To-Do List Management</title>
+    <title>Login Now</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style/index.css">
 </head>
@@ -48,7 +48,7 @@
 
             const username = document.getElementById("username").value;
             const password = document.getElementById("password").value;
-            if (username === "admin" && password === "admin@123") {
+            if (username === "groupa" && password === "groupa@123") {
                 alert("Login Successful!");
                 window.location.href = "dashboard.php";
             } else {
